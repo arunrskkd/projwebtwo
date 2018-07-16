@@ -38,7 +38,7 @@
           <div class="col-lg-4 bgwhitesect">
               <div class="sectinbgwhite">
                   <h3>Get In Touch !</h3>
-                  <form action="">
+                  <form action="" id="form">
                   <div class="form-control-sect">
                     <input type="text" class="form-control-input " placeholder="NAME" required>
                   </div>
@@ -49,8 +49,11 @@
                         <input type="text" class="form-control-input cphone " placeholder="PHONE" required>
                     </div>
                     <div class="form-control-sect">
-                      <select name="" class="form-control-input " >
-                        <option value="asd">PROJECT</option>
+                      <select name="" class="form-control-input " id="project">
+                        <option value="">PROJECT</option>
+                        <option value="VEEGALAND KINGS FORT">VEEGALAND KINGS FORT</option>
+                        <option value="VEEGALAND BLUEBELL">VEEGALAND BLUEBELL</option>
+                        <option value="VEEGALAND EXOTICA">VEEGALAND EXOTICA</option>
                       </select>
                     </div>
                     <div class="d-none">
@@ -133,7 +136,7 @@
                         <span class="slocation"><img src="./images/round_loca.png"></span><span class="stext">Rajagiri Valley - 5 . 3 km</span>
                       </li>
                 </ul>
-                <button class="btntwo">Enquire Now</button>
+                <button class="btntwo" proj="VEEGALAND KINGS FORT" >Enquire Now</button>
               </div>
 
 
@@ -200,7 +203,7 @@
                         <span class="slocation"><img src="./images/round_loca.png"></span><span class="stext">Sunrise Hospital - 1 . 5 km</span>
                       </li>
                 </ul>
-                <button class="btntwo">Enquire Now</button>
+                <button class="btntwo"  proj="VEEGALAND BLUEBELL">Enquire Now</button>
               </div>
 
 
@@ -266,7 +269,7 @@
                         <span class="slocation"><img src="./images/round_loca.png"></span><span class="stext">Changampuzha Park Metro Station  - 1.8 km</span>
                       </li>
                 </ul>
-                <button class="btntwo">Enquire Now</button>
+                <button class="btntwo" proj="VEEGALAND EXOTICA">Enquire Now</button>
               </div>
 
 
@@ -609,7 +612,14 @@ function getQueryStringValue (key) {
                 seterrormessage(this);
                 
             })
-
+            
+            $('.btntwo').click(function(event) {
+                event.preventDefault();
+                $('html, body').animate({
+                scrollTop: $("#form").offset().top
+            }, 2000);
+            $("#project").val($(this).attr("proj"));
+            });
            
         });
 
