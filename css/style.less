@@ -74,6 +74,9 @@ li{
             margin: 6vw 0 37px 0;
         .logo{
             width: 207px;
+            @media(max-width:500px){
+                margin: 0 auto;    
+            }
         }
         h2{
             font-size: 31px;
@@ -81,6 +84,9 @@ li{
             font-family: Montserrat-Bold;
             margin-top: 26px;
             text-transform: uppercase;
+            @media(max-width:500px){
+                text-align: center;
+            }
         }
         }
         .bgwhitesect{
@@ -155,6 +161,10 @@ li{
         .sectsinglproj{
              background: #ffffff;
              margin-bottom: 20px;
+             @media(max-width:500px){
+                margin-left: 0;
+                margin-right: 0;
+            }
              &:last-child{
                 margin-bottom: 0px;  
              }
@@ -290,6 +300,9 @@ li{
     .amenities{
         padding: 95px 0 45px 0;
         background: #fcc200;
+        @media(max-width:500px){
+              padding: 50px 0;  
+        }
         .arrowsforslide1{
             width: 200px;
             margin: 0 auto;
@@ -318,16 +331,22 @@ li{
             font-family: Montserrat-Regular;
             text-align: center;
             line-height: 26px;
+            @media(max-width:500px){
+                display: none;
+            }
         }
         .notetext{
             font-size: 13px;
             color: #000000;
             text-align: center;
             font-family: Montserrat-Regular;
-
+            display: block;
         }
         .slideronesect{
             margin: 82px 0;
+            @media(max-width:500px){
+                margin: 22px 0;
+            }
             .slick-arrow{
                 position: absolute;
                 top: -1px;
@@ -360,7 +379,9 @@ li{
     }
     .specialattraction{
         padding: 94px 0;
-
+        @media(max-width:500px){
+            padding: 50px 0;  
+      }
         h3{
             font-size: 32px;
             text-align: center;
@@ -374,6 +395,9 @@ li{
             font-family: Montserrat-Regular;
             text-align: center;
             line-height: 26px;
+            @media(max-width:500px){
+                display: none;
+            }   
         }
         .col-custom{
             width:200px;
@@ -423,6 +447,9 @@ li{
         background-size: cover;
         background-position: center;
         padding: 73px 91px;
+        @media(max-width:991px){
+            padding: 10px;
+        }
         .logoimg{
             width: 225px;
             margin-bottom: 15px;
@@ -445,6 +472,9 @@ li{
                 display: flex;
                 align-items: center;
                 margin-top: 36px;
+                @media(max-width:500px){
+                    display: none;
+                }
                 li{
                     font-size: 17px;
                     color: #2a2811;
@@ -464,5 +494,20 @@ li{
             padding: 28px 0;
             text-align: center;
         }
+    }
+   
+}
+@media(max-width:500px){
+    .contveegaone .sectionlast .logoimg{
+        margin: 0 auto;
+    } 
+    .contveegaone .sectionlast .pone{
+        text-align: center;
+    }           
+    .contveegaone .sectionlast .ptwo{
+        text-align: center;
+    }
+    .contveegaone .specialattraction .col-custom{
+        width: 176px;
     }
 }

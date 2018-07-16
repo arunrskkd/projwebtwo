@@ -546,7 +546,7 @@ Brick
  $(document).ready(function(){
 
 
-      if (screen.width < 1400 && screen.width > 991) {
+      if (screen.width < 1400 ) {
         var elems = document.querySelectorAll('*');
         for (var i = elems.length; i--;) {
           if (elems[i].tagName == "H3" || elems[i].tagName == "H2" || elems[i].tagName == "H3" || elems[i].tagName == "H4" || elems[i].tagName == "H5" || elems[i].tagName == "P" || elems[i].tagName == "SPAN" || elems[i].tagName == "LI" || elems[i].tagName == "BUTTON") {
@@ -558,6 +558,7 @@ Brick
           }
         }
       }
+   
  });
   </script>
 
@@ -616,7 +617,7 @@ function getQueryStringValue (key) {
             $('.btntwo').click(function(event) {
                 event.preventDefault();
                 $('html, body').animate({
-                scrollTop: $("#form").offset().top
+                scrollTop: $(".sectinbgwhite").offset().top
             }, 2000);
             $("#project").val($(this).attr("proj"));
             });
