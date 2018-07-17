@@ -773,13 +773,19 @@
     }
     var map;
     function initMap(latitude, longitude) {
+      var lati = parseInt(latitude);
+      var longi = parseInt(longitude);
+      
       map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: latitude, lng: longitude },
+        center: { lat: lati, lng: longi },
         zoom: 8
       });
+
+      var marker = new google.maps.Marker({position:{ lat: lati, lng: longi }, map: map});
+
     }
   </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4Mn86axpBJ4yB0rNsAed00hkw3iPc8uY&#038&callback=myMap" async defer></script>
 </body>
 
 </html>
