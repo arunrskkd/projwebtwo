@@ -15,8 +15,7 @@
   <link href='css/lightbox.css' rel='stylesheet' type='text/css'>
   <!-- tel no -->
   <link rel="stylesheet" href="./css/intlTelInput.css">
-  <!-- lightbox -->
-  <link href='css/lightbox.css' rel='stylesheet' type='text/css'>
+
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
 
   <title>Veega land</title>
@@ -122,8 +121,9 @@
                 <h4>VEEGALAND KINGS FORT</h4>
                 <h5>Eroor, Thripunithura, Cochin</h5>
                 <div class="sectflag">
-                  <span class="flag">Nearing Completion</span>  
-                  <span class="mapview"><span class="locaicon"><img src="./images/locatnimg.png"></span><span class="mapviewlink">Map View</span></span>
+                  <span class="flag">Nearing Completion</span> 
+                
+                  <a class="mapview"  data-toggle="modal" data-target=".bd-example-modal-lg" lat="8.573032" long="76.864140" onclick="maping(this)"><span class="locaicon"><img src="./images/locatnimg.png"></span><span class="mapviewlink">Map View</span></a>
                 </div>
               </div>
               <div class="sectionsecond">
@@ -190,7 +190,7 @@
                 <h5>OPP. NPOL, Kakkanad</h5>
                 <div class="sectflag">
                   <span class="flag">Nearing Completion</span>  
-                  <span class="mapview"><span class="locaicon"><img src="./images/locatnimg.png"></span><span class="mapviewlink">Map View</span></span>
+                  <a class="mapview" data-toggle="modal" data-target=".bd-example-modal-lg" lat="8.573032" long="76.864140" onclick="maping(this)"><span class="locaicon"><img src="./images/locatnimg.png"></span><span class="mapviewlink">Map View</span></a>
                 </div>
               </div>
               <div class="sectionsecond">
@@ -256,7 +256,7 @@
                 <h5>Edappally</h5>
                 <div class="sectflag">
                   <span class="flag">Nearing Completion</span>  
-                  <span class="mapview"><span class="locaicon"><img src="./images/locatnimg.png"></span><span class="mapviewlink">Map View</span></span>
+                  <a class="mapview" data-toggle="modal" data-target=".bd-example-modal-lg" lat="8.573032" long="76.864140" onclick="maping(this)"><span class="locaicon"><img src="./images/locatnimg.png"></span><span class="mapviewlink">Map View</span></a>
                 </div>
               </div>
               <div class="sectionsecond">
@@ -487,14 +487,31 @@ Brick
     </div>
     <footer class="footer">
         <h6>Copyright @ veegaland2018. All rights reserved</h6>
-      </footer>
+    </footer>
 
+      <!-- lightbox  pop section -->
       <div class="gallerypics d-none">
           <a  href="./images/veegalang_banner.jpg" data-lightbox="KINGS FORT"></a>
           <a  href="./images/veegalang_banner.jpg" data-lightbox="KINGS FORT"></a>
 
 
         </div>
+
+
+        <!-- map popup section -->
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header"> 
+                  <button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span> </button>
+                   </div>
+                <div id="map" style="width:100%;height:500px">
+              </div>
+            </div>
+          </div>
+        </div>
+             
   </div>
 
 
@@ -683,7 +700,25 @@ function getQueryStringValue (key) {
 	    
 	    
 	   // -----------------------------------------------------end validation
-  </script>
+     function maping(element){
+       var latitude = $(element).attr("lat");
+       var longitude = $(element).attr("long");
+       console.log(latitude)
+       console.log(longitude)
+       
+
+       initMap(latitude,longitude);
+     }
+      var map;
+      function initMap(latitude,longitude) {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: latitude, lng: longitude},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+    async defer></script>
 </body>
 
 </html>
