@@ -15,6 +15,8 @@
   <link href='css/lightbox.css' rel='stylesheet' type='text/css'>
   <!-- tel no -->
   <link rel="stylesheet" href="./css/intlTelInput.css">
+  <!-- lightbox -->
+  <link href='css/lightbox.css' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
 
   <title>Veega land</title>
@@ -60,8 +62,8 @@
                       <input type="text" class="utmsource">
                       <input type="text" class="utmmedium">
                     </div>
-                    <div class="form-control-sect">
-                      <input  class="btnone" type="submit" value="I WOULD LIKE TO KNOW MORE     ">                 </div>
+                    <div class="form-control-sect mt-4">
+                      <input  class="btnone" type="submit" value="I WOULD LIKE TO KNOW MORE     ">          </div>
                     </form>
                       <ul class="ulone">
                         <li class="lione">Or Give us a call at</li>
@@ -83,9 +85,9 @@
                 <div class="row ">
                   <div class="col-lg-9 p-0 position-relative">
                     <img src="./images/buildingonea.jpg">
-                    <span class="floorplansect">
+                    <a class="floorplansect" href="./images/veegalang_banner.jpg" data-lightbox="KINGS FORT">
                       <span class="img"><img src="./images/floorplanpreview.png"></span> <span class="text"> View Floor Plan</span>
-                    </span>
+                    </a>
                   </div>
                   <div class="col-lg-3 p-0 alignsect">
                       <div class="sect">
@@ -149,9 +151,9 @@
                 <div class="row ">
                   <div class="col-lg-9 p-0 position-relative">
                     <img src="./images/buildingoneb.jpg">
-                    <span class="floorplansect">
+                    <a class="floorplansect" href="./images/veegalang_banner.jpg" data-lightbox="KINGS FORT">
                         <span class="img"><img src="./images/floorplanpreview.png"></span> <span class="text"> View Floor Plan</span>
-                      </span>
+                    </a>
                   </div>
                   <div class="col-lg-3 p-0 alignsect">
                       <div class="sect">
@@ -215,9 +217,9 @@
                 <div class="row ">
                   <div class="col-lg-9 p-0 position-relative">
                     <img src="./images/buildingonec.jpg">
-                    <span class="floorplansect">
+                    <a class="floorplansect" href="./images/veegalang_banner.jpg" data-lightbox="KINGS FORT">
                         <span class="img"><img src="./images/floorplanpreview.png"></span> <span class="text"> View Floor Plan</span>
-                      </span>
+                    </a>
                   </div>
                   <div class="col-lg-3 p-0 alignsect">
                       <div class="sect">
@@ -443,7 +445,7 @@ Brick
             <img src="./images/imgonea.jpg">
           </div>
           <div class="col-lg-6 p-0 position-relative">
-            <img src="./images/imgoneb.jpg">
+            <img src="./images/imgoneb.jpg" class="d-none d-lg-block">
             <span class="midlsecttestimo">
            
                     <p><span class="blockquetes"><img src="./images/blocqutesonea.png"></span><br> We Value Your Investment. 
@@ -486,6 +488,13 @@ Brick
     <footer class="footer">
         <h6>Copyright @ veegaland2018. All rights reserved</h6>
       </footer>
+
+      <div class="gallerypics d-none">
+          <a  href="./images/veegalang_banner.jpg" data-lightbox="KINGS FORT"></a>
+          <a  href="./images/veegalang_banner.jpg" data-lightbox="KINGS FORT"></a>
+
+
+        </div>
   </div>
 
 
@@ -549,7 +558,7 @@ Brick
       if (screen.width < 1400 ) {
         var elems = document.querySelectorAll('*');
         for (var i = elems.length; i--;) {
-          if (elems[i].tagName == "H3" || elems[i].tagName == "H2" || elems[i].tagName == "H3" || elems[i].tagName == "H4" || elems[i].tagName == "H5" || elems[i].tagName == "P" || elems[i].tagName == "SPAN" || elems[i].tagName == "LI" || elems[i].tagName == "BUTTON") {
+          if (elems[i].tagName == "H3" || elems[i].tagName == "H2" || elems[i].tagName == "H3" || elems[i].tagName == "H4" || elems[i].tagName == "H5" ||  elems[i].tagName == "P" || elems[i].tagName == "SPAN" || elems[i].tagName == "LI" || elems[i].tagName == "BUTTON") {
             var f_size = getComputedStyle(elems[i]).fontSize;
             var numb = f_size.replace(/\D/g, ''); // the number
             var val = f_size.replace(/\d/g, ''); // px

@@ -92,7 +92,7 @@ li{
         .bgwhitesect{
             background: #ffffff;
             .sectinbgwhite{
-                padding: 15% 8%;
+                padding: 10% 8%;
                 h3{
                     font-size: 29px;
                     color: #000000;
@@ -101,7 +101,7 @@ li{
                     margin-bottom: 28px;
                 }
                 .form-control-sect{
-                    margin-bottom: 24px;
+                    margin-bottom: 5%;
                     .form-control-input{
                   
                         padding: 12px 0;
@@ -214,6 +214,10 @@ li{
                         color: #000000;
                         font-family: Montserrat-Medium;
                         display: block;
+                        @media(max-width:500px){
+                           font-size: 15px;
+                           padding:10px 0 0 0;
+                        }
                     }
                  
                 }
@@ -428,17 +432,32 @@ li{
             position: absolute;
             top: 50px;
             padding-left: 5%;
+            @media(max-width:991px){
+                position: inherit;
+                background:url(../images/imgoneb_mob.jpg) no-repeat;
+                background-size: cover;
+                top: 0;
+                display: block;
+            }
             p{
                 font-size: 40px;
                 color: #ffffff;
                 font-family: Exo-ExtraBoldItalic;
                 width: 80%;
+                @media(max-width:991px){
+                    width: 100%;
+                    padding: 9% 0;
+                }
             }
             h6{
                 font-size: 26px;
                 color: #ffffff;
                 font-family: Montserrat-ExtraBold;
                 margin-top: 26px;
+                @media(max-width:991px){
+                    padding: 0 0 15% 0;
+                    font-size: 21px;
+                }
             }
         }
     }
